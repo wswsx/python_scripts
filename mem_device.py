@@ -6,10 +6,10 @@ import psutil
 import datetime
 now_time = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
 boot_time = datetime.datetime.fromtimestamp(psutil.boot_time()).strftime("%Y-%m-%d %H:%M:%S")
-print ('*' * 108)
+print ('*' * 107)
 print ('%-30s%-30s' %('当前系统时间','系统启动时间'))
 print ('%-24s%-24s' %(now_time,boot_time))
-print ('*' * 108)
+print ('*' * 107)
 
 
 #系统用户
@@ -32,7 +32,7 @@ Used = str(round(psutil.virtual_memory().used / (1024.0 * 1024.0 ), 2))
 Memory = float(Used)/float(Total)
 Buffers = str(round(psutil.virtual_memory().buffers / (1024.0 * 1024.0 ), 2))
 Cached = str(round(psutil.virtual_memory().cached / (1024.0 * 1024.0 ), 2))
-print('*'* 50 +'内存信息' + '*' * 50  )
+print('*'* 49 +'内存信息' + '*' * 49  )
 total = 'total(M)'
 free = 'free(M)'
 used = 'used(M)'
@@ -42,7 +42,7 @@ percent = 'percent(%)'
 print ('%-15s%-15s%-15s%-15s%-15s%-15s' % (total,free,used,percent,buffers,cached))
 print ('%-15s%-15s%-15s%-15s%-15s%-15s' %(Total,Free,Used,round(Memory*100,2),Buffers,Cached))
    
-print('*'* 50 +'磁盘信息' + '*' * 50  )
+print('*'* 49 +'磁盘信息' + '*' * 49  )
 dev = psutil.disk_partitions()
 name = 'name'
 mount = 'mount'
